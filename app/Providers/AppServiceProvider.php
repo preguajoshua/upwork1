@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-Use Schema; 
+Use Illuminate\Support\Facades\Schema; 
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->bind('path.public',function(){return base_path('public'); })
+        $this->app->bind('path.public',function(){return base_path('public_html'); });
     }
 
     /**
